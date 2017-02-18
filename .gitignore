@@ -4,3 +4,4 @@ __pycache__
 *.swp
 lists/migrations/*
 geckodriver.log
+lists/static/
