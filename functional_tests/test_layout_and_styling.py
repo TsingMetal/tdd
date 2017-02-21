@@ -21,8 +21,8 @@ class LayoutAndStylingTest(FunctionalTest):
 
         # She starts a new list and sees the input is nicely
         # centered there too
-        inputbox.send_keys('testing')
-        inputbox.send_keys(Keys.ENTER)
+        inputbox.send_keys('testing\n')
+        # inputbox.send_keys(Keys.ENTER)
         time.sleep(1) # must sleep for the browser to update
         inputbox = self.browser.find_element_by_id('id_new_item')
 
