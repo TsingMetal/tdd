@@ -4,7 +4,7 @@ from lists.models import Item
 
 
 class ItemForm(forms.models.ModelForm):
-    item_text = forms.CharField(
+    text = forms.CharField(
             widget=forms.fields.TextInput(attrs={
                 'placeholder': 'Enter a to-do item',
                 'class': 'form-control input-lg',
@@ -23,3 +23,7 @@ class ItemForm(forms.models.ModelForm):
         error_messages = {
                 'text': {'required': "You can't have an empty list item"}
         }
+
+    def save(self, for_list):
+        self.instance.list = for_list
+        return super().save()
