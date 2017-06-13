@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^index/$', sign_views.index),
     url(r'^login_action/$', sign_views.login_action),
     url(r'^event_manage/$', sign_views.event_manage),
+    url(r'^accounts/login/$', sign_views.index),
     url(r'^admin/', admin.site.urls),
 ]
